@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" placeholder="0" id="big-screen">
+            <button onclick="Clear()" id="btn1">CL</button>
+            <button onclick="del()" id="btn2">DEL</button>
+            <button onclick="display('%')" id="btn3">%</button>
+            <button onclick="display('/')" id="btn4">/</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('*')" id="btn5">*</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('-')" id="btn6">-</button>
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('+')" id="btn7">+</button>
+            <button onclick="display('.')" id="btn8">.</button>
+            <button onclick="display('0')">0</button>
+            <button onclick="Calculate()" class="eql-btn">=</button>
+        </div>
+    </div>
+    <script>
+        let screen = document.getElementById("big-screen");
+
+        function display(num){
+            screen.value += num;
+        }
+        function Calculate(){
+            try{
+                screen.value = eval(screen.value);
+            }
+            catch(err){
+                alert("Invalid")
+            }
+        }
+        function Clear(){
+            screen.value = "";
+        }
+        function del(){
+            screen.value = screen.value.slice(0,-1);
+        }
+    </script>
+</body>
+</html>

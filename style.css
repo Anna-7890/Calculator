@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ecf0f3;
+    font-family: sans-serif;
+    outline: none;
+}
+.container{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    background-color: #ecf0f3;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px #ffff,
+                        5px 5px 12px rgba(0,0,0,0.16);
+    display: grid;
+    grid-template-columns: repeat(4,70px);
+
+}
+input{
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: #ecf0f3;
+    box-shadow: inset -5px -5px 12px #fff,inset 5px 5px 12px rgba(0,0,0,0.16);
+    border: none;
+    border-radius: 30px;
+    color: rgba(70,70,70);
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+button{
+    height: 48px;
+    width: 48px;
+    background-color: #ecf0f3;
+    box-shadow:  inset -5px -5px 12px #fff,inset 5px 5px 12px rgba(0,0,0,0.16);
+    border: none;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #ff80b3;
+    box-shadow:  inset -5px -5px 12px #ff1a75,inset 5px 5px 12px #fff;
+}
+.eql-btn{
+    width: 115px;
+    border-radius: 40px;
+    background-color: #00ffff;
+    box-shadow:   1px 1px 8px #00e6e6, 1px 1px 2px #00e6e6;
+
+}
+#btn1{
+    background: #ff66ff;
+    box-shadow:  1px 1px 8px #cc00cc,1px 1px 2px #cc00cc;
+}
+#btn2{
+    background: #66ff66;
+    box-shadow:  1px 1px 8px #00e600,1px 1px 2px #00e600;
+}
+@media (max-width:779px){
+    .container{
+        width: 100vw;
+        height: 100vh;
+    }
+}
+@media (max-width:635px) {
+    .container{
+        margin-bottom: 40px;
+        width: 100vw;
+        height: 100vh;
+        /* margin-left: 50%;
+        margin-right: 50%;
+        align-items: center; */
+        align-items: center;
+    }
+}
+@media (max-width:320px) {
+    .container{
+        margin-bottom: 40px;
+        width: 100vw;
+        height: 100vh;
+        /* margin-left: 50%;
+        margin-right: 50%;
+        align-items: center; */
+        align-items: center;
+    }
+}
